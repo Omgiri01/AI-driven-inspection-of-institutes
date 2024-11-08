@@ -196,3 +196,6 @@ The **docker folder** contains a couple of helper scripts:
    Afterwards, continue to start your project in the backend directory by running:
 
    `yarn start`
+
+3. Deployed link : https://insptitutes.flatlogic.app/
+   
