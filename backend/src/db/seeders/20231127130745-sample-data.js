@@ -55,18 +55,6 @@ const InspectionsData = [
 
     // type code here for "relation_one" field
   },
-
-  {
-    scheduled_date: new Date('2023-11-20T08:00:00'),
-
-    completion_date: new Date('2023-11-21T13:00:00'),
-
-    // type code here for "relation_one" field
-
-    report: 'Significant improvements noted since last inspection.',
-
-    // type code here for "relation_one" field
-  },
 ];
 
 const NotificationsData = [
@@ -109,16 +97,6 @@ const NotificationsData = [
 
     // type code here for "relation_one" field
   },
-
-  {
-    message: 'Inspection results for Sunset High School are now available.',
-
-    sent_at: new Date('2023-11-10T12:00:00'),
-
-    // type code here for "relation_one" field
-
-    // type code here for "relation_one" field
-  },
 ];
 
 const InstitutesData = [
@@ -136,10 +114,6 @@ const InstitutesData = [
 
   {
     name: 'Lakeside Academy',
-  },
-
-  {
-    name: 'Sunset High School',
   },
 ];
 
@@ -189,17 +163,6 @@ async function associateUserWithInstitute() {
   if (User3?.setInstitute) {
     await User3.setInstitute(relatedInstitute3);
   }
-
-  const relatedInstitute4 = await Institutes.findOne({
-    offset: Math.floor(Math.random() * (await Institutes.count())),
-  });
-  const User4 = await Users.findOne({
-    order: [['id', 'ASC']],
-    offset: 4,
-  });
-  if (User4?.setInstitute) {
-    await User4.setInstitute(relatedInstitute4);
-  }
 }
 
 async function associateInspectionWithInspector() {
@@ -245,17 +208,6 @@ async function associateInspectionWithInspector() {
   });
   if (Inspection3?.setInspector) {
     await Inspection3.setInspector(relatedInspector3);
-  }
-
-  const relatedInspector4 = await Users.findOne({
-    offset: Math.floor(Math.random() * (await Users.count())),
-  });
-  const Inspection4 = await Inspections.findOne({
-    order: [['id', 'ASC']],
-    offset: 4,
-  });
-  if (Inspection4?.setInspector) {
-    await Inspection4.setInspector(relatedInspector4);
   }
 }
 
@@ -303,17 +255,6 @@ async function associateInspectionWithInstitute() {
   if (Inspection3?.setInstitute) {
     await Inspection3.setInstitute(relatedInstitute3);
   }
-
-  const relatedInstitute4 = await Institutes.findOne({
-    offset: Math.floor(Math.random() * (await Institutes.count())),
-  });
-  const Inspection4 = await Inspections.findOne({
-    order: [['id', 'ASC']],
-    offset: 4,
-  });
-  if (Inspection4?.setInstitute) {
-    await Inspection4.setInstitute(relatedInstitute4);
-  }
 }
 
 async function associateNotificationWithUser() {
@@ -360,17 +301,6 @@ async function associateNotificationWithUser() {
   if (Notification3?.setUser) {
     await Notification3.setUser(relatedUser3);
   }
-
-  const relatedUser4 = await Users.findOne({
-    offset: Math.floor(Math.random() * (await Users.count())),
-  });
-  const Notification4 = await Notifications.findOne({
-    order: [['id', 'ASC']],
-    offset: 4,
-  });
-  if (Notification4?.setUser) {
-    await Notification4.setUser(relatedUser4);
-  }
 }
 
 async function associateNotificationWithInstitute() {
@@ -416,17 +346,6 @@ async function associateNotificationWithInstitute() {
   });
   if (Notification3?.setInstitute) {
     await Notification3.setInstitute(relatedInstitute3);
-  }
-
-  const relatedInstitute4 = await Institutes.findOne({
-    offset: Math.floor(Math.random() * (await Institutes.count())),
-  });
-  const Notification4 = await Notifications.findOne({
-    order: [['id', 'ASC']],
-    offset: 4,
-  });
-  if (Notification4?.setInstitute) {
-    await Notification4.setInstitute(relatedInstitute4);
   }
 }
 
