@@ -33,6 +33,8 @@
 
   - Database: PostgreSQL
 
+  - Deployed link : https://insptitutes.flatlogic.app/ 
+
   -----------------------
 ### We offer 2 ways how to start the project locally: by running Frontend and Backend or with Docker.
 -----------------------
@@ -197,5 +199,5 @@ The **docker folder** contains a couple of helper scripts:
 
    `yarn start`
 
-3. Deployed link : https://insptitutes.flatlogic.app/
+ 
    
